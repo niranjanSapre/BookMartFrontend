@@ -266,6 +266,8 @@ export default function PostedProduct() {
                                                             space={responsiveHeight(
                                                                 8
                                                             )}
+                                                            
+                                                            right={3}
                                                         >
                                                             <Text
                                                                 left={responsiveWidth(

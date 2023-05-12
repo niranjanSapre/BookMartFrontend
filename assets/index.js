@@ -25,3 +25,4 @@ export { default as Product } from "./images/Product.png";
 export { default as Avtar } from "./images/Avtar.png";
 export { default as Message } from "./images/Message.png"
 export { default as NoData } from "./images/NoData.png"
+export { default as Summary } from "./images/Summary.png"

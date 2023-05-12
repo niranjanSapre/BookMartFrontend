@@ -111,7 +111,7 @@ export default function Receipt() {
 
                     <View style={styles.receiptPrice} fontFamily="Poppins">
                         <Text style={styles.receiptPriceText}>
-                            {"\u20B9"}. {bookPrice}
+                            {"\u20B9"} {bookPrice}
                         </Text>
 
                         <Text
@@ -177,7 +177,7 @@ export default function Receipt() {
                                 Payment method
                             </Text>
 
-                            <Text style={styles.detailsValue}>card</Text>
+                            <Text style={styles.detailsValue}>Card</Text>
                         </View>
 
                         <View style={styles.detailsRow}>

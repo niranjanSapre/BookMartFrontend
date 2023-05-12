@@ -149,11 +149,11 @@ const Search = () => {
                             </Text>
                         </VStack>
                         <Spacer />
-                        <VStack space={responsiveHeight(8)} top={20}>
+                        <VStack space={responsiveHeight(8)} top={responsiveHeight(13)}>
                             <Button
-                                width={responsiveWidth(24)}
+                                width={responsiveWidth(27)}
                                 backgroundColor="#ED7966"
-                                left={-105}
+                                left={-115}
                                 onPress={() =>
                                     navigation.navigate("Buy1", {
                                         book_id: item.id,

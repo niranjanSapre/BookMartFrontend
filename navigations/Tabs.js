@@ -68,7 +68,7 @@ const Tabs = () => {
                             style={{
                                 alignItems: "center",
                                 justifyContent: "center",
-                                top: 5,
+                                //top: 5,
                             }}
                         >
                             <Ionicons
@@ -89,7 +89,7 @@ const Tabs = () => {
                             style={{
                                 alignItems: "center",
                                 justifyContent: "center",
-                                top: 5,
+                                //top: 5,
                             }}
                         >
                             <MaterialIcons
@@ -132,7 +132,7 @@ const Tabs = () => {
                             style={{
                                 alignItems: "center",
                                 justifyContent: "center",
-                                top: 5,
+                                //top: 0,
                             }}
                         >
                             <AntDesign
@@ -153,7 +153,7 @@ const Tabs = () => {
                             style={{
                                 alignItems: "center",
                                 justifyContent: "center",
-                                top: 5,
+                                //top: 5,
                             }}
                         >
                             <MaterialCommunityIcons

@@ -10,6 +10,7 @@ import {
     Spacer,
     HStack,
     VStack,
+    Center,
 } from "native-base";
 import { useLayoutEffect } from "react";
 import { useNavigation, useRoute } from "@react-navigation/native";
@@ -19,6 +20,7 @@ import {
     responsiveWidth,
     responsiveFontSize,
 } from "react-native-responsive-dimensions";
+import { Summary } from "../../assets";
 
 export default function OrderSummary() {
     const navigation = useNavigation();
@@ -45,6 +47,15 @@ export default function OrderSummary() {
                 <Text style={styles.orderSummaryText} fontFamily="Poppins">
                     Order Summary
                 </Text>
+                <Center>
+                    <Image 
+                        source={Summary}
+                        width={250}
+                        height={110}
+                        top={responsiveHeight(8)}    
+                    />
+                </Center>
+                <Center>
                 <Box style={styles.rectangle1}>
                     <View style={styles.content1}>
                         <HStack>
@@ -83,6 +94,7 @@ export default function OrderSummary() {
                             </VStack>
                             <Spacer />
                             <Image
+                                marginTop={12}
                                 marginRight={5}
                                 position={"relative"}
                                 borderWidth={2}
@@ -97,7 +109,9 @@ export default function OrderSummary() {
                         </HStack>
                     </View>
                 </Box>
+                </Center>
 
+                <Center>
                 <Box style={styles.rectangle2}>
                     <View style={styles.content1}>
                         <Text fontFamily="Poppins" fontSize={20}>
@@ -106,9 +120,9 @@ export default function OrderSummary() {
                     </View>
                     <VStack style={styles.content1}>
                         <View>
-                            <HStack space={responsiveWidth(50)}>
+                            <HStack space={responsiveWidth(55)}>
                                 <Text fontFamily="Poppins" fontSize={16}>
-                                    Price-
+                                    Price
                                 </Text>
 
                                 <Text fontFamily="Poppins" fontSize={16}>
@@ -134,7 +148,7 @@ export default function OrderSummary() {
                     </VStack>
 
                     <View style={styles.content2}>
-                        <HStack space={responsiveWidth(21)}>
+                        <HStack space={responsiveWidth(21)} top={responsiveHeight(5)}>
                             <Text fontFamily="Poppins" fontSize={18}>
                                 Amount Payable
                             </Text>
@@ -145,7 +159,9 @@ export default function OrderSummary() {
                         </HStack>
                     </View>
                 </Box>
+                </Center>
 
+                <Center>
                 <Box style={styles.rectangle3}>
                     <View>
                         <HStack space={5}>
@@ -162,7 +178,7 @@ export default function OrderSummary() {
                             </VStack>
 
                             <Button
-                                width={responsiveWidth(32)}
+                                width={responsiveWidth(28)}
                                 backgroundColor="#ED7966"
                                 height={responsiveHeight(5)}
                                 top={5}
@@ -185,6 +201,7 @@ export default function OrderSummary() {
                         </HStack>
                     </View>
                 </Box>
+                </Center>
             </View>
         </NativeBaseProvider>
     );
@@ -211,22 +228,22 @@ const styles = StyleSheet.create({
         top: -5,
     },
     content1: {
-        marginTop: responsiveHeight(3),
-        paddingLeft: 20,
+        marginTop: responsiveHeight(1),
+        paddingLeft: 18,
     },
     content2: {
         marginTop: responsiveHeight(8),
-        paddingLeft: 20,
+        paddingLeft: 18,
     },
     content3: {
         marginTop: responsiveHeight(2),
-        paddingLeft: 20,
+        paddingLeft: 18,
     },
     rectangle1: {
         height: 220,
         width: 350,
         borderWidth: 1,
-        left: responsiveWidth(5),
+        //left: responsiveWidth(4),
         top: responsiveHeight(11),
         position: "relative",
     },
@@ -234,7 +251,7 @@ const styles = StyleSheet.create({
         height: 250,
         width: 350,
         borderWidth: 1,
-        left: responsiveWidth(5),
+        //left: responsiveWidth(5),
         top: responsiveHeight(13),
         position: "relative",
     },
@@ -242,7 +259,7 @@ const styles = StyleSheet.create({
         height: 80,
         width: 350,
         borderWidth: 1,
-        left: responsiveWidth(5),
+        //left: responsiveWidth(5),
         top: responsiveHeight(15),
         position: "relative",
     },

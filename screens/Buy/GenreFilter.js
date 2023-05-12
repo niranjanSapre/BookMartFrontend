@@ -126,7 +126,6 @@ export default function GenreFilter() {
                 ) : (
                     <>
                         <ScrollView
-                            top={responsiveHeight(2)}
                             maxHeight={responsiveHeight(89)}
                         >
                             <Box>
@@ -230,14 +229,14 @@ export default function GenreFilter() {
                                                 <Spacer />
                                                 <VStack
                                                     space={responsiveHeight(8)}
-                                                    top={20}
+                                                    top={responsiveHeight(11)}
                                                 >
                                                     <Button
                                                         width={responsiveWidth(
-                                                            24
+                                                            27
                                                         )}
                                                         backgroundColor="#ED7966"
-                                                        left={-105}
+                                                        left={-115}
                                                         onPress={() =>
                                                             navigation.navigate(
                                                                 "Buy1",

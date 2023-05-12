@@ -51,12 +51,13 @@ export default function PostedProduct() {
     const accessToken = global.token;
     const apiUrl = global.apiUrl;
 
-    const priceModification = (id, status, bookName, bookPrice) => {
+    const priceModification = (id, status, bookName, bookPrice, bookCoverPage) => {
         if (status === "Posted") {
             navigation.navigate("PriceModification", {
                 bookId: id,
                 bookName: bookName,
-                bookPrice: bookPrice
+                bookPrice: bookPrice,
+                bookCoverPage: bookCoverPage
             });
         } else if (status === "Sold") {
             setModalVisible(true);
@@ -314,6 +315,12 @@ export default function PostedProduct() {
                                                                 fontFamily={
                                                                     "Poppins"
                                                                 }
+                                                                numberOfLines={
+                                                                    2
+                                                                }
+                                                                style={{
+                                                                    width: 150,
+                                                                }}
                                                             >
                                                                 Posted on-{" "}
                                                                 {
@@ -324,7 +331,7 @@ export default function PostedProduct() {
                                                         <Spacer />
                                                         <VStack
                                                             space={responsiveHeight(
-                                                                9
+                                                                11
                                                             )}
                                                             top={1}
                                                         >
@@ -376,7 +383,8 @@ export default function PostedProduct() {
                                                                                     item.id,
                                                                                     item.status,
                                                                                     item.book_name,
-                                                                                    item.book_price
+                                                                                    item.book_price,
+                                                                                    item.book_cover_page
                                                                                 )
                                                                             }
                                                                         />

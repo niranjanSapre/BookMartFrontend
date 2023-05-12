@@ -1,1 +1,1 @@
-global.apiUrl = "http://192.168.0.106:80/api";
+global.apiUrl = "http://192.168.52.132:80/api";

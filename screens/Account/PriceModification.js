@@ -9,6 +9,8 @@ import {
     Input,
     HStack,
     VStack,
+    Image,
+    Center
 } from "native-base";
 import { useNavigation, useRoute } from '@react-navigation/native';
 import {
@@ -18,6 +20,8 @@ import {
 } from "react-native-responsive-dimensions";
 import { useFonts } from "expo-font";
 import axios from 'axios';
+import { Foundation } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function PriceModification() {
     const navigation = useNavigation();
@@ -97,83 +101,105 @@ export default function PriceModification() {
                     Price Modification
                 </Text>
 
-                <View style={styles.tooltip} >
-                    <Stack space={2} w="80%" maxW="300px" mx={5}>
-                        <HStack>
+                <View position={'absolute'} top={150}>
+                    <VStack space={6} left={5}>
+                        <View style={styles.EstTxt}>
+                            <HStack space={6}>
+                                <Foundation name="book" size={32} color="black" />
+                                <Text fontFamily={"Poppins"} numberOfLines={2} width={300}>
+                                    Book Name - {route.params.bookName}
+                                </Text>
+                            </HStack>
+                        </View>
+                        <View style={styles.EstTxt} >
+                            <HStack space={5}>
+                                <Ionicons name="pricetags-outline" size={28} color="black" />
+                            <Text fontFamily={"Poppins"}>
+                                Old Price - {route.params.bookPrice} {"\u20A8"}.
+                            </Text>
+                            </HStack>
+                        </View>
+                        <View style={styles.EstTxt} >
+                            <HStack space={5}>
+                                <Ionicons name="pricetags" size={28} color="black" />
+                                <Text fontFamily={"Poppins"}>
+                                    Update Price -
+                                </Text>
+                                <Input
+                                    fontFamily="Poppins"
+                                    bgColor={"#FAE5DF"}
+                                    borderColor={"#FAE5DF"}
+                                    variant="rounded"
+                                    width={100}
+                                    top={-10}
+                                    //defaultValue={price}
+                                    onChangeText={(name) =>
+                                        setPrice(name)
+                                    }
+                                    keyboardType="numeric"
+                                />
+                            </HStack>
+                        </View>
+                            
+                    </VStack>
+                </View>
+
+                <View style={styles.tooltip}>
+                    <View style={styles.container}>
+                        <Modal
+                            animationType="slide"
+                            transparent={true}
+                            visible={modalVisible}
+                            onResquestClose={() => {
+                                Alert.alert("Modal has been closed");
+                            }}
+                        >
                             <View style={styles.container}>
-                                <Modal
-                                    animationType="slide"
-                                    transparent={true}
-                                    visible={modalVisible}
-                                    onResquestClose={() => {
-                                        Alert.alert("Modal has been closed");
-                                    }}
-                                >
-                                    <View style={styles.container}>
-                                        <View style={styles.modalView}>
-                                            <Text
-                                                fontFamily={"Poppins"}
-                                                textAlign="center"
-                                            >
-                                                {text}
-                                            </Text>
-                                            <Pressable
-                                                style={[
-                                                    styles.button,
-                                                    styles.buttonClose,
-                                                ]}
-                                                onPress={() =>
-                                                    setModalVisible(
-                                                        !modalVisible
-                                                    )
-                                                }
-                                            >
-                                                <Text
-                                                    fontFamily={"Poppins"}
-                                                    style={styles.okText}
-                                                >
-                                                    ok
-                                                </Text>
-                                            </Pressable>
-                                        </View>
-                                    </View>
-                                </Modal>
-                            </View>
-                            <VStack space={6}>
-                                <View style={styles.EstTxt}>
-                                    <Text fontFamily={"Poppins"}>
-                                        Book Name - {route.params.bookName}
+                                <View style={styles.modalView}>
+                                    <Text
+                                        fontFamily={"Poppins"}
+                                        textAlign="center"
+                                    >
+                                        {text}
                                     </Text>
-                                </View>
-                                <View style={styles.EstTxt}>
-                                    <Text fontFamily={"Poppins"}>
-                                        Old Price - {route.params.bookPrice} {"\u20A8"}.
-                                    </Text>
-                                </View>
-                                <HStack>
-                                    <View style={styles.EstTxt}>
-                                        <Text fontFamily={"Poppins"}>
-                                            Update Price -
+                                    <Pressable
+                                        style={[
+                                            styles.button,
+                                            styles.buttonClose,
+                                        ]}
+                                        onPress={() =>
+                                            setModalVisible(
+                                                !modalVisible
+                                            )
+                                        }
+                                    >
+                                        <Text
+                                            fontFamily={"Poppins"}
+                                            style={styles.okText}
+                                        >
+                                            ok
                                         </Text>
-                                    </View>
-                                    <View style={styles.EstPrice}>
-                                        <Input
-                                            fontFamily="Poppins"
-                                            bgColor={"#FAE5DF"}
-                                            borderColor={"#FAE5DF"}
-                                            variant="rounded"
-                                            defaultValue={price}
-                                            onChangeText={(name) =>
-                                                setPrice(name)
-                                            }
-                                            keyboardType="numeric"
-                                        />
-                                    </View>
-                                </HStack>
-                            </VStack>
-                        </HStack>
-                        
-                    </Stack>
+                                    </Pressable>
+                                </View>
+                            </View>
+                        </Modal>
+                    </View>
+                </View>
+
+                <View top={350}>
+                    <Center>
+                    <Image
+                        //top={2}
+                        //left={250}
+                        //position={"absolute"}
+                        borderWidth={2}
+                        borderColor={"#000000"}
+                        height={290}
+                        width={190}
+                        source={{ uri: route.params.bookCoverPage }}
+                        alt="Alternate Text"
+                    />
+                    </Center>
                 </View>
 
                 <Button
@@ -215,8 +241,8 @@ const styles = StyleSheet.create({
         fontSize: responsiveFontSize(1.5),
         fontWeight: 400,
         lineHeight: 36,
-        top: responsiveHeight(1),
-        left: 40
+        //top: responsiveHeight(1),
+        left: 10
     },
     EstPrice: {
         top: responsiveHeight(-0.8),
@@ -224,7 +250,7 @@ const styles = StyleSheet.create({
         fontSize: responsiveFontSize(1.8),
         opacity: 0.7,
         height: responsiveHeight(5),
-        left: 50
+        left: 20
     },
     container: {
         flex: 1,
@@ -271,5 +297,26 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    // animated: {
+    //     animation: "up-down 2s ease-in-out infinite alternate-reverse both"
+    // },
+      
+    // @-webkit-keyframes up-down: {
+    // 0%{
+    //     transform: translateY(10px);
+    // }
+    // 100%{
+    //     transform: translateY(-10px);
+    // }
+    // }
+    
+    // @keyframes up-down: {
+    // 0%{
+    //     transform: translateY(10px);
+    // }
+    // 100%{
+    //     transform: translateY(-10px);
+    // }
+    // }
 });
 

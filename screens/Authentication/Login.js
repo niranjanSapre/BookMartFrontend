@@ -249,7 +249,7 @@ export default function Login() {
                     <Button
                         width={responsiveWidth(90)}
                         height={68}
-                        top={responsiveHeight(30)}
+                        top={responsiveHeight(40)}
                         marginRight={20}
                         marginLeft={responsiveWidth(5)}
                         backgroundColor="#ED7966"

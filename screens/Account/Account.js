@@ -50,8 +50,8 @@ export default function Account() {
                         ></Image>
 
                         <Text
-                            marginTop={responsiveHeight(6)}
-                            fontSize={responsiveFontSize(3)}
+                            marginTop={responsiveHeight(4)}
+                            fontSize={responsiveFontSize(2)}
                             fontFamily="Poppins"
                             numberOfLines={2}
                             width={150}

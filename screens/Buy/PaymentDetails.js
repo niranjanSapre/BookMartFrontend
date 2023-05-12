@@ -152,7 +152,7 @@ export default function PaymentDetails() {
                         <Button
                             width={responsiveWidth(90)}
                             height={68}
-                            top={responsiveHeight(36)}
+                            top={responsiveHeight(46)}
                             marginRight={20}
                             marginLeft={responsiveWidth(5)}
                             backgroundColor="#ED7966"
