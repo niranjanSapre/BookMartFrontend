@@ -269,18 +269,6 @@ export default function PostedProduct() {
                                                                     "Poppins"
                                                                 }
                                                             >
-                                                                ISBN-{" "}
-                                                                {item.book_isbn}
-                                                            </Text>
-                                                            <Text
-                                                                color="coolGray.600"
-                                                                _dark={{
-                                                                    color: "warmGray.200",
-                                                                }}
-                                                                fontFamily={
-                                                                    "Poppins"
-                                                                }
-                                                            >
                                                                 Price-{" "}
                                                                 {
                                                                     item.book_price
@@ -331,7 +319,7 @@ export default function PostedProduct() {
                                                         <Spacer />
                                                         <VStack
                                                             space={responsiveHeight(
-                                                                11
+                                                                8
                                                             )}
                                                             top={1}
                                                         >

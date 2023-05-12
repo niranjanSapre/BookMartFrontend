@@ -223,19 +223,6 @@ export default function Wishlist() {
                                                                     color: "warmGray.200",
                                                                 }}
                                                                 fontFamily="Poppins"
-                                                            >
-                                                                ISBN-{" "}
-                                                                {
-                                                                    item.book
-                                                                        .book_isbn
-                                                                }
-                                                            </Text>
-                                                            <Text
-                                                                color="coolGray.600"
-                                                                _dark={{
-                                                                    color: "warmGray.200",
-                                                                }}
-                                                                fontFamily="Poppins"
                                                                 numberOfLines={
                                                                     2
                                                                 }
@@ -267,7 +254,7 @@ export default function Wishlist() {
                                                         <Spacer />
                                                         <VStack
                                                             space={responsiveHeight(
-                                                                9
+                                                                8
                                                             )}
                                                             top={1}
                                                         >

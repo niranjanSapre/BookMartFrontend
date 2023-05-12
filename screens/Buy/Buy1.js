@@ -128,12 +128,12 @@ export default function Buy1() {
                             marginTop: responsiveHeight(5),
                         }}
                     >
-                        <HStack>
+                        <HStack space={8}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={24}
                                 numberOfLines={2}
-                                style={{ width: 320 }}
+                                style={{ width: 300 }}
                                 paddingLeft={2}
                             >
                                 {route.params.book_name}
@@ -192,7 +192,7 @@ export default function Buy1() {
                                 </Text>
                                 <View
                                     width={370}
-                                    h={40}
+                                    h={responsiveHeight(25)}
                                     borderWidth={1}
                                     bgColor={"#FAE5DF"}
                                 >
@@ -386,7 +386,8 @@ export default function Buy1() {
                             </Modal>
                         </View>
                     </View>
-                    <View marginTop={4}>
+                </ScrollView>
+                <View marginTop={4}>
                         <Button.Group
                             isAttached
                             colorScheme="blue"
@@ -448,7 +449,6 @@ export default function Buy1() {
                             </Button>
                         </Button.Group>
                     </View>
-                </ScrollView>
             </View>
         </NativeBaseProvider>
     );

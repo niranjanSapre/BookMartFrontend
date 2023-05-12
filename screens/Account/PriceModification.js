@@ -130,7 +130,7 @@ export default function PriceModification() {
                                     bgColor={"#FAE5DF"}
                                     borderColor={"#FAE5DF"}
                                     variant="rounded"
-                                    width={100}
+                                    width={120}
                                     top={-10}
                                     //defaultValue={price}
                                     onChangeText={(name) =>
