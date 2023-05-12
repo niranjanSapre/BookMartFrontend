@@ -149,9 +149,10 @@ const Search = () => {
                             </Text>
                         </VStack>
                         <Spacer />
-                        <VStack space={responsiveHeight(8)} top={responsiveHeight(13)}>
+                        <VStack space={responsiveHeight(8)}>
                             <Button
                                 width={responsiveWidth(27)}
+                                top={responsiveHeight(12)}
                                 backgroundColor="#ED7966"
                                 left={-115}
                                 onPress={() =>
