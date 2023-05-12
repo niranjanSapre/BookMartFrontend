@@ -70,7 +70,7 @@ export default function Account() {
                         backgroundColor="#ED7966"
                         onPress={() => navigation.navigate("PostedProduct")}
                     >
-                        <HStack space={responsiveWidth(40)}>
+                        <HStack space={responsiveWidth(35)}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={22}
@@ -95,7 +95,7 @@ export default function Account() {
                         backgroundColor="#ED7966"
                         onPress={() => navigation.navigate("MyOrder")}
                     >
-                        <HStack space={responsiveWidth(55)}>
+                        <HStack space={responsiveWidth(51)}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={22}
@@ -121,7 +121,7 @@ export default function Account() {
                         backgroundColor="#ED7966"
                         onPress={() => navigation.navigate("Settings")}
                     >
-                        <HStack space={responsiveWidth(60)}>
+                        <HStack space={responsiveWidth(57)}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={22}

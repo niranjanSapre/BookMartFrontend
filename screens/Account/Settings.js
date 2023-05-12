@@ -107,7 +107,7 @@ export default function Settings() {
                         backgroundColor="#ED7966"
                         onPress={() => navigation.navigate("LegalAndAbout")}
                     >
-                        <HStack space={responsiveWidth(37)}>
+                        <HStack space={responsiveWidth(31)}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={22}
@@ -133,7 +133,7 @@ export default function Settings() {
                         backgroundColor="#ED7966"
                         onPress={deleteAlert}
                     >
-                        <HStack space={responsiveWidth(40)}>
+                        <HStack space={responsiveWidth(35)}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={22}
@@ -159,7 +159,7 @@ export default function Settings() {
                         backgroundColor="#ED7966"
                         onPress={logoutAlert}
                     >
-                        <HStack space={responsiveWidth(61)}>
+                        <HStack space={responsiveWidth(62)}>
                             <Text
                                 fontFamily="Poppins"
                                 fontSize={22}

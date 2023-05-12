@@ -312,7 +312,7 @@ export default function Wishlist() {
                                                             </View>
                                                             <Button
                                                                 width={responsiveWidth(
-                                                                    24
+                                                                    26
                                                                 )}
                                                                 backgroundColor="#ED7966"
                                                                 left={-12}

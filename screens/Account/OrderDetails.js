@@ -16,6 +16,7 @@ import {
     responsiveWidth,
     responsiveFontSize,
 } from "react-native-responsive-dimensions";
+import { AntDesign } from '@expo/vector-icons'; 
 
 export default function OrderDetails() {
     const navigation = useNavigation();
@@ -75,7 +76,7 @@ export default function OrderDetails() {
                         </VStack>
                         <Image
                             top={2}
-                            left={250}
+                            left={265}
                             position={"absolute"}
                             borderWidth={2}
                             borderColor={"#000000"}
@@ -93,44 +94,23 @@ export default function OrderDetails() {
                             top={4}
                             paddingRight={responsiveWidth(70)}
                         >
-                            <View
-                                style={{
-                                    width: 20,
-                                    height: 20,
-                                    borderRadius: 15,
-                                    backgroundColor: "green",
-                                }}
-                            ></View>
+                            <AntDesign name="checkcircle" size={24} color="purple" />
                             <View
                                 style={{
                                     width: 2,
                                     height: 75,
-                                    backgroundColor: "black",
+                                    backgroundColor: "purple",
                                 }}
                             ></View>
-                            <View
-                                style={{
-                                    width: 20,
-                                    height: 20,
-                                    borderRadius: 15,
-                                    backgroundColor: "orange",
-                                }}
-                            ></View>
+                            <AntDesign name="checkcircle" size={24} color="#fad02c" />
                             <View
                                 style={{
                                     width: 2,
                                     height: 75,
-                                    backgroundColor: "black",
+                                    backgroundColor: "#fad02c",
                                 }}
                             ></View>
-                            <View
-                                style={{
-                                    width: 20,
-                                    height: 20,
-                                    borderRadius: 15,
-                                    backgroundColor: "blue",
-                                }}
-                            ></View>
+                            <AntDesign name="checkcircle" size={24} color="green" />
                         </View>
                         <View>
                             <Text style={styles.orderText} fontFamily="Poppins">
@@ -150,7 +130,7 @@ export default function OrderDetails() {
                 </View>
                 <View paddingLeft={4} top={responsiveHeight(4)}>
                     <Box style={styles.rectangle2}>
-                        <Text fontFamily="Poppins" opacity={0.5} left={1}>
+                        <Text fontFamily="Poppins" opacity={0.5} left={1} paddingBottom={5}>
                             Shipping Details
                         </Text>
                         <Text style={styles.buyerName} fontFamily="Poppins">
@@ -187,19 +167,19 @@ const styles = StyleSheet.create({
         zIndex: 99,
     },
     orderText: {
-        fontSize: responsiveFontSize(2.5),
+        fontSize: responsiveFontSize(2),
         left: 60,
-        top: responsiveHeight(-24.3),
+        top: responsiveHeight(-25),
     },
     outText: {
-        fontSize: responsiveFontSize(2.5),
+        fontSize: responsiveFontSize(2),
         left: 60,
-        top: responsiveHeight(-15.2),
+        top: responsiveHeight(-15.9),
     },
     deliveryText: {
-        fontSize: responsiveFontSize(2.5),
+        fontSize: responsiveFontSize(2),
         left: 60,
-        top: responsiveHeight(-5.8),
+        top: responsiveHeight(-6.2),
     },
     buyerName: {
         fontSize: responsiveFontSize(2.5),
